@@ -61,3 +61,51 @@ nav ul li a.active::after,
 nav ul li a:hover::after {
   width: 100%;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .header-left {
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .toggle-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: #05555c;
+    font-size: 2rem;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .toggle-menu {
+    display: none;
+  }
+}
