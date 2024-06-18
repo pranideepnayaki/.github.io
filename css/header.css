@@ -1,0 +1,63 @@
+/* Styles specific to the header section */
+header {
+  background-color: #eaf3fa;
+  color: #05555c;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.header-left {
+  margin-right: 6rem; /* Add space between the name and the navigation */
+}
+
+.header-left h1 {
+  color: #05555c;
+  margin: 0;
+  white-space: nowrap;
+  padding-left: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Use bold weight for emphasis */
+}
+
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 3rem; /* Space between navigation items */
+}
+
+nav ul li a {
+  color: #186f78;
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #186f78;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav ul li a.active::after,
+nav ul li a:hover::after {
+  width: 100%;
+}

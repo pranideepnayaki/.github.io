@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f9fe;
+  color: #186f78;
+}
+
+main {
+  padding-top: 1rem;
+  padding-left: 8rem;
+  padding-right: 10rem;
+}
+
+.worked {
+  text-align: center;
+}
+
+/* Experience page specific styles */
+.experience {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-right: 3rem;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.experience-container::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 1050px;
+  background-color: #05555c;
+  top: 0;
+  bottom: 0;
+  left: 20px; /* Adjust this value to move the timeline horizontally */
+}
+
+.job-details {
+  position: relative;
+  width: 100%;
+  padding-left: 60px; /* Add padding to make space for the timeline */
+}
+
+.job {
+  margin: 20px 0;
+  position: relative;
+  background-color: #f6f9fe; /* White background for job sections */
+  padding: 20px; /* Add padding for better spacing */
+  border: 1px solid #eaf3fa; /* Add border to separate from the background */
+  border-radius: 8px; /* Optional: Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual separation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.job:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #eaf3fa;
+}
+
+.job::before {
+  content: "";
+  position: absolute;
+  width: 20px; /* Adjust size of the circle */
+  height: 20px; /* Adjust size of the circle */
+  left: -52.5px; /* Align with the timeline */
+  top: 0; /* Position at the top of the job entry */
+  background-color: white;
+  border: 4px solid #05555c;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#accenture .job::before,
+#cognizant .job::before,
+#iniesta .job::before {
+  background-color: #ffcc00; /* Adjust color as needed */
+}
+
+.job h2 {
+  margin-top: 0;
+}
+
+.job p {
+  font-style: italic;
+  color: #05555c;
+  margin-bottom: 10px;
+}
+
+.job ul {
+  list-style-type: none; /* Remove default bullet */
+  padding-left: 0; /* Remove default padding */
+}
+
+.job ul li {
+  margin-bottom: 8px;
+  width: 100%; /* Equal width for all list items */
+  position: relative;
+  padding-left: 20px; /* Space for dot */
+}
+
+.job ul li::before {
+  content: "\2022"; /* Unicode character for bullet */
+  color: #186f78; /* Bullet color */
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 5px; /* Adjust vertical alignment */
+}
+
+/* Header visibility classes */
+.header-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.header-visible {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}

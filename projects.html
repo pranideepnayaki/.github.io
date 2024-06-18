@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Pranideep Reddy Nayaki</title>
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <h1>Pranideep Reddy</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1zm69c_D8f4UuOXoqT9rpcs8jsdtP_oiT/view?usp=sharing"
+              target="_blank"
+              class="nav-link"
+              >Resume</a
+            >
+          </li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="portfolio">
+        <h1>My Latest Projects</h1>
+        <div class="project-grid">
+          <div
+            class="project"
+            onclick="openModal('modal1')"
+            onmouseover="toggleArrow('arrow1', true)"
+            onmouseout="toggleArrow('arrow1', false)"
+          >
+            <h2>Plant Disease Detection</h2>
+            <div id="arrow1" class="arrow"></div>
+          </div>
+          <div
+            class="project"
+            onclick="openModal('modal2')"
+            onmouseover="toggleArrow('arrow2', true)"
+            onmouseout="toggleArrow('arrow2', false)"
+          >
+            <h2>Minimal College Website</h2>
+            <div id="arrow2" class="arrow"></div>
+          </div>
+          <div
+            class="project"
+            onclick="openModal('modal3')"
+            onmouseover="toggleArrow('arrow3', true)"
+            onmouseout="toggleArrow('arrow3', false)"
+          >
+            <h2>Recipe Finder Application</h2>
+            <div id="arrow3" class="arrow"></div>
+          </div>
+          <!-- Add more projects here in similar structure -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Plant Disease Detection</h2>
+        <ul>
+          <li><b>Tech Stack: </b>ML, Python, JavaScript, Flask</li>
+          <li>
+            <b>Github URL: </b
+            ><a
+              href="https://github.com/username/twitter-analysis"
+              target="_blank"
+              >Project Link</a
+            >
+          </li>
+        </ul>
+        <p>
+          Our project focuses on using machine learning to detect diseases in
+          plants. By analyzing images of plant leaves and extracting key
+          features like color and texture, we train a model to classify plants
+          as healthy or diseased. This technology enables early detection,
+          empowering farmers to take timely actions and optimize agricultural
+          productivity.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Minimal College Website</h2>
+        <ul>
+          <li><b>Tech Stack: </b>HTML, CSS, MySQL, JavaScript</li>
+          <li>
+            <b>Github URL: </b
+            ><a
+              href="https://github.com/username/twitter-analysis"
+              target="_blank"
+              >Project Link</a
+            >
+          </li>
+        </ul>
+        <p>
+          Developed a dynamic and responsive college website. It includes
+          sections for home, about, academics, admissions, and contact,
+          providing a comprehensive overview of the college.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Recipe Finder Application</h2>
+        <ul>
+          <li><b>Tech Stack: </b>Java, SQL, HTML, CSS, JavaScript</li>
+          <li>
+            <b>Github URL: </b
+            ><a
+              href="https://github.com/username/twitter-analysis"
+              target="_blank"
+              >Project Link</a
+            >
+          </li>
+        </ul>
+        <p>
+          Developed a dynamic recipe app with responsive design. Users can
+          search for recipes, view detailed instructions, adjust servings, and
+          bookmark favorites. Integrated an external API for recipe data. This
+          project showcases my skills in front-end development, API integration,
+          and creating user-friendly applications.
+        </p>
+      </div>
+    </div>
+
+    <script src="js/project.js"></script>
+  </body>
+</html>
