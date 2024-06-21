@@ -9,8 +9,8 @@ body {
 
 main {
   padding-top: 2rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 1rem; /* Adjust left padding for smaller devices */
+  padding-right: 1rem; /* Adjust right padding for smaller devices */
 }
 
 .portfolio h1 {
@@ -30,12 +30,13 @@ main {
   border: 1px solid #186f78;
   border-radius: 10px;
   overflow: hidden;
-  width: 300px;
+  width: 100%; /* Full width for mobile */
   text-align: center;
   position: relative;
   padding: 1rem;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 20px; /* Space between projects on mobile */
 }
 
 .project:hover {
@@ -114,4 +115,11 @@ main {
   opacity: 1;
   transform: translate(-50%, -10px);
   transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .project {
+    width: 300px; /* Adjust width for larger screens */
+  }
 }

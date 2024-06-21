@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,83 +8,144 @@ body {
 }
 
 main {
-  padding-top: 1rem;
-  padding-left: 8rem;
-  padding-right: 10rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 1rem 8rem;
+  }
 }
 
 .worked {
   text-align: center;
+  margin-bottom: 0;
 }
 
-/* Experience page specific styles */
+/* Experience Page Specific Styles */
 .experience {
   max-width: 1000px;
   margin: 0 auto;
-  padding-right: 3rem;
+  padding: 0 1rem;
 }
 
 .experience-container {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-top: 2rem;
 }
 
-.experience-container::before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 1050px;
-  background-color: #05555c;
-  top: 0;
-  bottom: 0;
-  left: 20px; /* Adjust this value to move the timeline horizontally */
+/* Large Screen Timeline */
+@media (min-width: 768px) {
+  .experience-container::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 1007px;
+    background-color: #05555c;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+  }
+
+  .job-details {
+    position: relative;
+    width: 100%;
+    padding-left: 60px;
+  }
+
+  .job::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -52.5px;
+    top: 0;
+    background-color: white;
+    border: 4px solid #05555c;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .job {
+    margin: 10px 0;
+    margin-bottom: 2rem;
+    position: relative;
+    background-color: #f6f9fe;
+    padding: 20px;
+    border: 1px solid #eaf3fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+      background-color 0.3s ease;
+  }
+
+  .job:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #eaf3fa;
+  }
 }
 
-.job-details {
-  position: relative;
-  width: 100%;
-  padding-left: 60px; /* Add padding to make space for the timeline */
-}
+/* Mobile Screen Timeline */
+@media (max-width: 768px) {
+  .experience-container::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 1700px;
+    background-color: #05555c;
+    top: 0;
+    bottom: 0;
+    left: -15px;
+  }
 
-.job {
-  margin: 20px 0;
-  position: relative;
-  background-color: #f6f9fe; /* White background for job sections */
-  padding: 20px; /* Add padding for better spacing */
-  border: 1px solid #eaf3fa; /* Add border to separate from the background */
-  border-radius: 8px; /* Optional: Add border radius for rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual separation */
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease; /* Smooth transition for hover effects */
-}
+  .job-details {
+    position: relative;
+    width: 100%;
+    padding-left: 10px;
+  }
 
-.job:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background: #eaf3fa;
-}
+  .job::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -37.5px;
+    top: 5px;
+    background-color: white;
+    border: 4px solid #05555c;
+    border-radius: 50%;
+    z-index: 1;
+  }
 
-.job::before {
-  content: "";
-  position: absolute;
-  width: 20px; /* Adjust size of the circle */
-  height: 20px; /* Adjust size of the circle */
-  left: -52.5px; /* Align with the timeline */
-  top: 0; /* Position at the top of the job entry */
-  background-color: white;
-  border: 4px solid #05555c;
-  border-radius: 50%;
-  z-index: 1;
+  .job {
+    margin: 0;
+    margin-bottom: 1.25rem;
+    position: relative;
+    background-color: #f6f9fe;
+    padding: 20px;
+    border: 1px solid #eaf3fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+      background-color 0.3s ease;
+  }
+
+  .job:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #eaf3fa;
+  }
 }
 
 #accenture .job::before,
 #cognizant .job::before,
 #iniesta .job::before {
-  background-color: #ffcc00; /* Adjust color as needed */
+  background-color: #ffcc00;
 }
 
-.job h2 {
+.job h3 {
   margin-top: 0;
 }
 
@@ -94,33 +156,124 @@ main {
 }
 
 .job ul {
-  list-style-type: none; /* Remove default bullet */
-  padding-left: 0; /* Remove default padding */
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .job ul li {
   margin-bottom: 8px;
-  width: 100%; /* Equal width for all list items */
+  width: 100%;
   position: relative;
-  padding-left: 20px; /* Space for dot */
+  padding-left: 20px;
 }
 
 .job ul li::before {
-  content: "\2022"; /* Unicode character for bullet */
-  color: #186f78; /* Bullet color */
+  content: "\2022";
+  color: #186f78;
   font-size: 12px;
   position: absolute;
   left: 0;
-  top: 5px; /* Adjust vertical alignment */
+  top: 5px;
 }
 
-/* Header visibility classes */
-.header-hidden {
-  transform: translateY(-100%);
-  transition: transform 0.3s ease;
+/* Header Styles */
+header {
+  background-color: #eaf3fa;
+  color: #05555c;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.header-visible {
-  transform: translateY(0);
-  transition: transform 0.3s ease;
+.header-left h1 {
+  color: #05555c;
+  margin: 0;
+  white-space: nowrap;
+  padding-left: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: #186f78;
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #186f78;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav ul li a.active::after,
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .toggle-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: #05555c;
+    font-size: 2rem;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .toggle-menu {
+    display: none;
+  }
 }

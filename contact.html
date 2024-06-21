@@ -6,6 +6,7 @@
     <title>Contact - Pranideep Reddy Nayaki</title>
     <link rel="stylesheet" href="css/contact-style.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/mobile-header.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
       rel="stylesheet"
@@ -16,6 +17,7 @@
       <div class="header-left">
         <h1>Pranideep Reddy</h1>
       </div>
+      <button class="toggle-menu" onclick="toggleMenu()">&#9776;</button>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -24,7 +26,7 @@
           <li><a href="projects.html">Projects</a></li>
           <li>
             <a
-              href="https://drive.google.com/file/d/1zm69c_D8f4UuOXoqT9rpcs8jsdtP_oiT/view?usp=sharing"
+              href="https://drive.google.com/file/d/15kmV99vW3_LrCFdaRutQnwgSbOtnuJeF/view?usp=sharing"
               target="_blank"
               >Resume</a
             >
@@ -32,6 +34,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <div class="overlay" onclick="toggleMenu()"></div>
     </header>
     <main>
       <section class="contact">
@@ -49,7 +52,7 @@
           <div class="contact-item">
             <img
               src="images/email-icon.png"
-              alt="Globe"
+              alt="Envelope"
               class="social-icon-contact"
             />
             <h2>Email</h2>
@@ -71,42 +74,27 @@
               alt="Globe"
               class="social-icon-contact"
             />
-            <!-- Globe icon -->
             <h2>Social Profiles</h2>
             <ul class="social-links">
               <li>
                 <a
                   href="https://www.linkedin.com/in/pranideepreddynayaki"
                   target="_blank"
-                >
-                  <img
+                  ><img
                     src="images/linkedin-icon.png"
                     alt="LinkedIn"
                     class="social-icon"
-                  />
-                </a>
+                /></a>
               </li>
               <li>
-                <a href="https://github.com/pranideepnayaki" target="_blank">
-                  <img
+                <a href="https://github.com/pranideepnayaki" target="_blank"
+                  ><img
                     src="images/github-icon.png"
                     alt="GitHub"
                     class="social-icon"
-                  />
-                </a>
+                /></a>
               </li>
-              <!-- <li>
-                <a
-                  href="https://app.netlify.com/teams/n-pranideepreddy1999/overview"
-                  target="_blank"
-                >
-                  <img
-                    src="images/netlify-icon.png"
-                    alt="Netlify"
-                    class="social-icon"
-                  />
-                </a>
-              </li> -->
+              <!-- Add more social links here if needed -->
             </ul>
           </div>
         </div>

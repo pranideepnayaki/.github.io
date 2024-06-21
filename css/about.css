@@ -7,9 +7,23 @@ body {
 }
 
 main {
-  padding-top: 6rem;
-  padding-left: 6rem;
-  padding-right: 8rem;
+  padding: 2rem; /* Adjust the padding for mobile */
+}
+
+@media (min-width: 768px) {
+  main {
+    padding-top: 2rem;
+    padding-left: 6rem;
+    padding-right: 8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .tabs {
@@ -52,7 +66,7 @@ main {
 }
 
 .content-box ul li {
-  margin-bottom: 15px; /* Adjust the value as needed */
+  margin-bottom: 15px;
 }
 
 .content-box {
@@ -85,23 +99,25 @@ main {
   margin-bottom: 0;
 }
 
-.boxes {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
+@media (min-width: 768px) {
+  .boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
 
-.box {
-  width: calc(33.33% - 20px);
-  background-color: #f6f9fe;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+  .box {
+    width: calc(33.33% - 20px);
+    background-color: #f6f9fe;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-.box:not(:last-child) {
-  margin-right: 20px;
+  .box:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 
 .box img {
@@ -121,12 +137,19 @@ h2 {
 
 .profile-container {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
 }
 
-.profile-content {
-  flex-grow: 1;
-  padding-left: 50px;
+@media (min-width: 768px) {
+  .profile-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profile-content {
+    padding-left: 50px;
+  }
 }
 
 .about {
@@ -140,7 +163,7 @@ h2 {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 10px; /* Space between social icons */
+  gap: 10px;
 }
 
 .social-links li {
@@ -149,21 +172,21 @@ h2 {
 }
 
 .social-icon {
-  width: 35px; /* Adjust size as needed */
+  width: 35px;
   height: 35px;
   border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-right: 5px;
 }
 
 .social-icon:hover {
-  transform: scale(1.2); /* Scale up the icon on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .social-links a:hover .social-icon {
-  transform: scale(1.2); /* Scale up the icon on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .social-links img {
@@ -204,7 +227,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-.paragraph-box p {
+.paragraph-box p:last-child {
   margin-bottom: 0;
 }
 
@@ -216,44 +239,86 @@ h2 {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10; /* Ensure the header is above other elements */
+  z-index: 10;
 }
 
-.profile-image-wrapper {
-  position: relative;
-  width: fit-content;
-  margin-top: 85px;
-  z-index: 1; /* Ensure the profile image is below the header */
+@media (min-width: 768px) {
+  .profile-image-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: 85px;
+    z-index: 1; /* Ensure the profile image is below the header */
+  }
+
+  .profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    z-index: 1; /* Ensure the profile image is below the header */
+    position: relative;
+  }
+
+  .profile-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 2px solid #05555c;
+    border-radius: 12px;
+    z-index: 0;
+  }
+
+  .profile-image-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 2px solid #05555c;
+    border-radius: 12px;
+    z-index: 0;
+  }
 }
 
-.profile-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
-  z-index: 1; /* Ensure the profile image is below the header */
-  position: relative;
-}
+@media (max-width: 768px) {
+  .profile-image-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    z-index: 1;
+  }
 
-.profile-image-wrapper::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  border: 2px solid #05555c;
-  border-radius: 12px;
-  z-index: 0;
-}
+  .profile-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+  }
 
-.profile-image-wrapper::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  right: -10px;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  border: 2px solid #05555c;
-  border-radius: 12px;
-  z-index: 0;
+  .profile-image-wrapper::before,
+  .profile-image-wrapper::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 2px solid #05555c;
+    border-radius: 12px;
+    z-index: 0;
+  }
+
+  .profile-image-wrapper::before {
+    top: -10px;
+    left: -10px;
+  }
+
+  .profile-image-wrapper::after {
+    bottom: -10px;
+    right: -10px;
+  }
 }

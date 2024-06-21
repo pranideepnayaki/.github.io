@@ -26,3 +26,8 @@ window.onclick = function (event) {
     event.target.style.display = "none";
   }
 };
+
+function toggleMenu() {
+  var nav = document.querySelector("nav");
+  nav.classList.toggle("active");
+}
