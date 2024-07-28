@@ -242,10 +242,8 @@ nav ul li a:hover::after {
   color: #05555c;
   font-size: 120%;
   position: absolute;
-  top: 0px;
-  right: 0px;
   cursor: pointer;
-  padding: 20px;
+  padding-left: 260px;
 }
 
 @media (max-width: 768px) {
