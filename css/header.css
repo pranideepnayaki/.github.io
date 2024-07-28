@@ -1,24 +1,25 @@
-/* Styles specific to the header section */
+/* Base Styles */
 header {
   background-color: #eaf3fa;
   color: #05555c;
-  padding: 1rem 2rem;
+  padding: 1% 2%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: 7.5%;
+  padding-right: 10%;
 }
 
 .header-left {
   margin-right: 6rem; /* Add space between the name and the navigation */
+  flex: 1; /* Allow the header-left to grow and fill available space */
 }
 
 .header-left h1 {
   color: #05555c;
   margin: 0;
   white-space: nowrap;
-  padding-left: 2rem;
+  padding-left: 10%;
   font-family: "Poppins", sans-serif;
   font-weight: 700; /* Use bold weight for emphasis */
 }
@@ -35,13 +36,13 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 3rem; /* Space between navigation items */
+  margin-right: 7%; /* Space between navigation items */
 }
 
 nav ul li a {
   color: #186f78;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 120%;
   position: relative;
 }
 
@@ -49,11 +50,10 @@ nav ul li a::after {
   content: "";
   display: block;
   width: 0;
-  height: 2px;
+  height: 7%;
   background: #186f78;
   transition: width 0.3s ease;
   position: absolute;
-  bottom: -5px;
   left: 0;
 }
 
@@ -62,30 +62,333 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
+.toggle-menu {
+  display: none;
+}
+
+/* XXL Devices */
+@media (min-width: 1400px) {
+  .header-left {
+    margin-right: 10%;
+  }
+
+  .header-left h1 {
+    padding-left: 10%;
+    font-size: 2.5rem; /* Adjust font size if necessary */
+  }
+
+  nav ul li {
+    margin-right: 7%;
+  }
+
+  nav ul li a {
+    font-size: 130%;
+  }
+
   header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+
+/* XL Devices */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .header-left {
+    margin-right: 10%;
+  }
+
+  .header-left h1 {
+    padding-left: 10%;
+    font-size: 2rem; /* Adjust font size if necessary */
+  }
+
+  nav ul li {
+    margin-right: 7%;
+  }
+
+  nav ul li a {
+    font-size: 120%;
+  }
+
+  header {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+
+/* Large Devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+  header {
+    padding: 1%;
+    padding-left: 2.5%;
+    padding-right: 5%;
   }
 
   .header-left {
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin-right: 3rem;
+  }
+
+  .header-left h1 {
+    padding-left: 2.5%;
+    font-size: 2rem;
+    margin-left: 27.5%;
+  }
+
+  nav ul {
+    margin-left: 8%;
+  }
+
+  nav ul li {
+    margin-right: 5%;
+  }
+
+  nav ul li a {
+    font-size: 120%;
+  }
+}
+
+/* Medium Devices */
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    padding: 1%;
+    padding-left: 2.5%;
+    padding-right: 5%;
+  }
+
+  .header-left {
+    margin-right: 3rem;
+  }
+
+  .header-left h1 {
+    padding-left: 2.5%;
+    font-size: 1.4rem;
+    margin-left: 27.5%;
+  }
+
+  nav ul {
+    margin-left: 7%;
+  }
+
+  nav ul li {
+    margin-right: 3%;
+  }
+
+  nav ul li a {
+    font-size: 110%;
+  }
+}
+
+/* iPad Mini Portrait and Similar Devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    padding: 1%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+  .header-left {
+    margin-right: 3rem;
+  }
+
+  .header-left h1 {
+    padding-left: 2.5%;
+    font-size: 1.6rem;
+  }
+
+  nav ul li {
+    margin-right: 5%;
+  }
+
+  nav ul li a {
+    font-size: 110%;
+  }
+}
+
+/* Devices with max-width 900px */
+@media screen and (max-width: 900px) {
+  .header-left {
+    margin-right: 3rem;
+  }
+
+  .header-left h1 {
+    margin-left: 25%;
+    padding-left: 2.5%;
+    font-size: 1.6rem; /* Adjust font size if necessary */
+  }
+
+  nav ul li {
+    margin-right: 3%;
+  }
+
+  nav ul li a {
+    font-size: 100%;
+  }
+
+  nav ul {
+    margin-left: 6%;
+  }
+
+  header {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+/* Close Menu Button */
+.close-menu {
+  display: none; /* Initially hidden */
+  background: none;
+  border: none;
+  color: #05555c;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .close-menu {
+    display: block;
+  }
+  nav ul li a::after {
+    display: none;
+  }
+  header {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 0%;
+  }
+
+  .header-left h1 {
+    font-size: 175%;
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 2.5rem;
+    margin-left: 15%;
+  }
+
+  header nav {
+    display: none; /* Hide nav by default */
+    width: 80%;
+    position: absolute; /* Position it below the header */
+    top: 12%; /* Adjust this value based on your header height */
+    left: 10%;
+    right: 10%;
+    background-color: #eaf3fa; /* Ensure it has a background color */
+    z-index: 1000; /* Ensure it appears above other content */
+    border-radius: 15px;
+    padding-top: 10%;
   }
 
   nav ul {
     flex-direction: column;
     width: 100%;
-    display: none;
+    display: flex; /* Display nav on mobile screens */
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   nav ul li {
     margin-right: 0;
     margin-bottom: 1rem;
+  }
+
+  nav ul li a {
+    color: #05555c;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    text-align: center;
+  }
+
+  .toggle-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: #05555c;
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-top: -5%;
+    margin-right: 15%;
+  }
+
+  nav.active {
+    display: block; /* Show nav when active class is added */
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  nav.active ~ .overlay {
+    display: block; /* Show overlay when menu is active */
+  }
+
+  .overlay {
+    position: fixed; /* Fixed position overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 5; /* Below the menu but above content */
+    display: none; /* Initially hidden */
+  }
+
+  .underline {
+    display: none;
+  }
+
+  .intro h1 {
+    position: relative;
+  }
+
+  .intro h1::before {
+    content: "I a";
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .intro h1 > span {
+    display: none;
+  }
+}
+
+/* Devices with max-width 700px */
+@media screen and (max-width: 700px) {
+  header nav {
+    top: 10%;
+  }
+  nav ul li a::after {
+    display: none;
+  }
+  nav {
+    width: 100%;
+    margin-top: 1rem; /* Space between the header and nav */
+    align-self: flex-end; /* Align nav to the right */
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: flex; /* Display nav on mobile screens */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-top: 4%;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 100%;
   }
 
   .toggle-menu {
@@ -95,17 +398,122 @@ nav ul li a:hover::after {
     color: #05555c;
     font-size: 2rem;
     cursor: pointer;
-    align-self: flex-end;
+    margin-top: -5%;
+    margin-right: 10%;
+  }
+
+  nav.active {
+    display: block; /* Show nav when active class is added */
   }
 
   nav.active ul {
     display: flex;
   }
+
+  nav.active ~ .overlay {
+    display: block; /* Show overlay when menu is active */
+  }
+
+  .overlay {
+    position: fixed; /* Fixed position overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 5; /* Below the menu but above content */
+    display: none; /* Initially hidden */
+  }
+
+  .underline {
+    display: none;
+  }
+
+  .intro h1 {
+    position: relative;
+  }
+
+  .intro h1::before {
+    content: "I a";
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .intro h1 > span {
+    display: none;
+  }
 }
 
-/* Tablet styles */
-@media (min-width: 768px) {
-  .toggle-menu {
+/* Devices with max-width 550px */
+@media screen and (max-width: 550px) {
+  header nav {
+    top: 10%;
+  }
+  nav ul li a::after {
     display: none;
+  }
+  nav ul li a {
+    font-size: 90%;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2.5%;
+    padding-bottom: 0%;
+  }
+
+  .header-left h1 {
+    font-size: 175%;
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 2rem;
+    margin-left: 10%;
+  }
+
+  .toggle-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: #05555c;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: -5%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header nav {
+    top: 9%;
+  }
+  nav ul li a::after {
+    display: none;
+  }
+  header {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 0%;
+  }
+
+  .header-left h1 {
+    font-size: 175%;
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 1.75rem;
+    margin-left: 10%;
+  }
+
+  .toggle-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: #05555c;
+    font-size: 1.75rem;
+    cursor: pointer;
+    margin-top: -5%;
+    margin-right: 10%;
   }
 }

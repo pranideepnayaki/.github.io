@@ -19,6 +19,7 @@
       </div>
       <button class="toggle-menu" onclick="toggleMenu()">&#9776;</button>
       <nav>
+        <button class="close-menu" onclick="toggleMenu()">&times;</button>
         <ul>
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
@@ -26,7 +27,7 @@
           <li><a href="projects.html" class="nav-link">Projects</a></li>
           <li>
             <a
-              href="https://drive.google.com/file/d/15kmV99vW3_LrCFdaRutQnwgSbOtnuJeF/view?usp=sharing"
+              href="https://drive.google.com/file/d/1AjurhFCyaqmeuOFk9eNc9O9t8TlO0HH3/view?usp=sharing"
               target="_blank"
               class="nav-link"
               >Resume</a
@@ -68,6 +69,15 @@
             <h2>Recipe Finder Application</h2>
             <div id="arrow3" class="arrow"></div>
           </div>
+          <div
+            class="project"
+            onclick="openModal('modal4')"
+            onmouseover="toggleArrow('arrow4', true)"
+            onmouseout="toggleArrow('arrow4', false)"
+          >
+            <h2>Smart Assistance</h2>
+            <div id="arrow4" class="arrow"></div>
+          </div>
           <!-- Add more projects here in similar structure -->
         </div>
       </section>
@@ -83,7 +93,7 @@
           <li>
             <b>Github URL: </b
             ><a
-              href="https://github.com/username/twitter-analysis"
+              href="https://github.com/pranideepnayaki/Plant_Disease_Detection"
               target="_blank"
               >Project Link</a
             >
@@ -109,7 +119,7 @@
           <li>
             <b>Github URL: </b
             ><a
-              href="https://github.com/username/twitter-analysis"
+              href="https://github.com/pranideepnayaki/College_Website"
               target="_blank"
               >Project Link</a
             >
@@ -132,7 +142,7 @@
           <li>
             <b>Github URL: </b
             ><a
-              href="https://github.com/username/twitter-analysis"
+              href="https://github.com/pranideepnayaki/forkify-food-app"
               target="_blank"
               >Project Link</a
             >
@@ -144,6 +154,31 @@
           bookmark favorites. Integrated an external API for recipe data. This
           project showcases my skills in front-end development, API integration,
           and creating user-friendly applications.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Smart Assistance</h2>
+        <ul>
+          <li><b>Tech Stack: </b>AI Language Model, Dart, C++, CMake, Swift</li>
+          <li>
+            <b>Github URL: </b
+            ><a
+              href="https://github.com/pranideepnayaki/smart_assistant"
+              target="_blank"
+              >Project Link</a
+            >
+          </li>
+        </ul>
+        <p>
+          The Smart Assistant Flutter App is a user-friendly application
+          designed to provide instant translations from English to German using
+          an AI language model. This app leverages the T5 model hosted on
+          Hugging Face to translate user inputs, providing a seamless and
+          interactive user experience.
         </p>
       </div>
     </div>
