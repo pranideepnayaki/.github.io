@@ -116,6 +116,11 @@ body {
   border-radius: 4px;
 }
 
+.contact-item p {
+  margin: 0.5rem 0;
+  font-size: 1rem; /* Ensure consistent font size for phone numbers */
+}
+
 /* Media queries for responsiveness */
 
 @media (min-width: 768px) {

@@ -240,11 +240,12 @@ nav ul li a:hover::after {
   background: none;
   border: none;
   color: #05555c;
-  font-size: 1rem;
+  font-size: 100%;
   position: absolute;
-  top: 1%;
-  right: 1%;
+  top: 0%;
+  right: 0%;
   cursor: pointer;
+  padding: 5%;
 }
 
 @media (max-width: 768px) {
@@ -279,7 +280,7 @@ nav ul li a:hover::after {
     background-color: #eaf3fa; /* Ensure it has a background color */
     z-index: 1000; /* Ensure it appears above other content */
     border-radius: 15px;
-    padding-top: 10%;
+    padding-top: 6%;
   }
 
   nav ul {
