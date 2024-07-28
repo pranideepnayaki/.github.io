@@ -240,10 +240,10 @@ nav ul li a:hover::after {
   background: none;
   border: none;
   color: #05555c;
-  font-size: 2rem;
+  font-size: 1rem;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1%;
+  right: 1%;
   cursor: pointer;
 }
 
