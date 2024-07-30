@@ -332,6 +332,10 @@ nav ul li a:hover::after {
   .intro h1 > span {
     display: none;
   }
+  .close-menu {
+    margin-top: 1%;
+    margin-left: 85%;
+  }
 }
 
 /* Devices with max-width 700px */
@@ -419,6 +423,10 @@ nav ul li a:hover::after {
   .intro h1 > span {
     display: none;
   }
+  .close-menu {
+    margin-top: 1%;
+    margin-left: 80%;
+  }
 }
 
 /* Devices with max-width 550px */
@@ -460,6 +468,10 @@ nav ul li a:hover::after {
     cursor: pointer;
     margin-top: -5%;
     margin-right: 10%;
+  }
+  .close-menu {
+    margin-top: 1%;
+    margin-left: 80%;
   }
 }
 
