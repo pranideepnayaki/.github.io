@@ -5,21 +5,18 @@ body {
   padding: 0;
   background-color: #f6f9fe;
   color: #186f78;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  max-width: 1400px;
+  width: 100%;
 }
 
 main {
   padding: 2rem;
-}
-
-@media (min-width: 1400px) {
-  main {
-    padding-top: 2rem;
-    padding-left: 10em;
-    padding-right: 12rem;
-  }
-  .content-box {
-    margin-right: -15%;
-  }
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {

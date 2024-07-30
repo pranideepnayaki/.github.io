@@ -66,31 +66,6 @@ nav ul li a:hover::after {
   display: none;
 }
 
-/* XXL Devices */
-@media (min-width: 1400px) {
-  .header-left {
-    margin-right: 10%;
-  }
-
-  .header-left h1 {
-    padding-left: 10%;
-    font-size: 2.5rem; /* Adjust font size if necessary */
-  }
-
-  nav ul li {
-    margin-right: 7%;
-  }
-
-  nav ul li a {
-    font-size: 130%;
-  }
-
-  header {
-    padding-left: 7.5%;
-    padding-right: 7.5%;
-  }
-}
-
 /* XL Devices */
 @media (min-width: 1200px) and (max-width: 1399px) {
   .header-left {
@@ -243,7 +218,8 @@ nav ul li a:hover::after {
   font-size: 120%;
   position: absolute;
   cursor: pointer;
-  padding: 1% 0 0 85%;
+  margin-top: 1%;
+  margin-left: 85%;
 }
 
 @media (max-width: 768px) {
@@ -288,7 +264,7 @@ nav ul li a:hover::after {
     padding: 0;
     margin: 0;
     list-style: none;
-    padding-top: 8%;
+    padding-top: 7%;
   }
 
   nav ul li {
@@ -379,7 +355,7 @@ nav ul li a:hover::after {
     padding: 0;
     margin: 0;
     list-style: none;
-    padding-top: 10%;
+    padding-top: 8%;
   }
 
   nav ul li {
@@ -449,6 +425,9 @@ nav ul li a:hover::after {
 @media screen and (max-width: 550px) {
   header nav {
     top: 10%;
+  }
+  nav ul {
+    padding-top: 10%;
   }
   nav ul li a::after {
     display: none;

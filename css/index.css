@@ -4,6 +4,14 @@ body {
   padding: 0;
   background-color: #f6f9fe;
   color: #186f78;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  max-width: 1400px;
+  width: 100%;
 }
 
 main {

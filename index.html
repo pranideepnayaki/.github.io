@@ -12,59 +12,61 @@
     />
   </head>
   <body>
-    <header>
-      <div class="header-left">
-        <h1>Pranideep Reddy</h1>
-      </div>
-      <button class="toggle-menu" onclick="toggleMenu()">&#9776;</button>
-      <nav>
-        <button class="close-menu" onclick="toggleMenu()">&times;</button>
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="experience.html" class="nav-link">Experience</a></li>
-          <li><a href="projects.html" class="nav-link">Projects</a></li>
-          <li>
-            <a
-              href="https://drive.google.com/file/d/1AjurhFCyaqmeuOFk9eNc9O9t8TlO0HH3/view?usp=sharing"
-              target="_blank"
-              class="nav-link"
-              >Resume</a
-            >
-          </li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="overlay" onclick="toggleMenu()"></div>
-    </header>
-    <main>
-      <section id="intro" class="intro">
-        <h3>Hey, There!</h3>
-        <h1><span class="underline">I a</span>m Pranideep Reddy Nayaki</h1>
-        <h3>Software Engineer</h3>
-        <p>
-          Fueled by a passion for technology and innovation, I excel at
-          developing elegant solutions for complex challenges. With a strong
-          background in software development and a keen eye for detail, I
-          consistently deliver projects that surpass expectations.
-        </p>
-        <a href="about.html" class="know-more-btn">Know more</a>
-        <div class="boxes">
-          <div class="box">
-            <img src="images/experience-icon.png" alt="Experience Icon" />
-            <p><b>2.5 Years of Experience</b></p>
-          </div>
-          <div class="box">
-            <img src="images/projects-icon.png" alt="Projects Icon" />
-            <p><b>10+ Projects Completed</b></p>
-          </div>
-          <div class="box">
-            <img src="images/coding-icon.png" alt="Coding Icon" />
-            <p><b>500+ Coding Problems Solved</b></p>
-          </div>
+    <div class="main-container">
+      <header>
+        <div class="header-left">
+          <h1>Pranideep Reddy</h1>
         </div>
-      </section>
-    </main>
+        <button class="toggle-menu" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+          <button class="close-menu" onclick="toggleMenu()">&times;</button>
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1AjurhFCyaqmeuOFk9eNc9O9t8TlO0HH3/view?usp=sharing"
+                target="_blank"
+                class="nav-link"
+                >Resume</a
+              >
+            </li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="overlay" onclick="toggleMenu()"></div>
+      </header>
+      <main>
+        <section id="intro" class="intro">
+          <h3>Hey, There!</h3>
+          <h1><span class="underline">I a</span>m Pranideep Reddy Nayaki</h1>
+          <h3>Software Engineer</h3>
+          <p>
+            Fueled by a passion for technology and innovation, I excel at
+            developing elegant solutions for complex challenges. With a strong
+            background in software development and a keen eye for detail, I
+            consistently deliver projects that surpass expectations.
+          </p>
+          <a href="about.html" class="know-more-btn">Know more</a>
+          <div class="boxes">
+            <div class="box">
+              <img src="images/experience-icon.png" alt="Experience Icon" />
+              <p><b>2.5 Years of Experience</b></p>
+            </div>
+            <div class="box">
+              <img src="images/projects-icon.png" alt="Projects Icon" />
+              <p><b>10+ Projects Completed</b></p>
+            </div>
+            <div class="box">
+              <img src="images/coding-icon.png" alt="Coding Icon" />
+              <p><b>500+ Coding Problems Solved</b></p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <script>
       function toggleMenu() {
         var nav = document.querySelector("nav");
