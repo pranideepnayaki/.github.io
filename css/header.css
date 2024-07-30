@@ -219,7 +219,7 @@ nav ul li a:hover::after {
   position: absolute;
   cursor: pointer;
   margin-top: 1%;
-  margin-left: 82.5%;
+  margin-left: 80%;
 }
 
 @media (max-width: 768px) {
