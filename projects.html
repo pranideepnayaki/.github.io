@@ -28,7 +28,7 @@
             <li><a href="projects.html" class="nav-link">Projects</a></li>
             <li>
               <a
-                href="https://drive.google.com/file/d/1AjurhFCyaqmeuOFk9eNc9O9t8TlO0HH3/view?usp=sharing"
+                href="https://drive.google.com/file/d/1xG7g3Tup4GqS4yESvIK_uEDM_dtPAUFg/view?usp=drive_link"
                 target="_blank"
                 class="nav-link"
                 >Resume</a
@@ -78,6 +78,24 @@
             >
               <h2>Smart Assistance</h2>
               <div id="arrow4" class="arrow"></div>
+            </div>
+            <div
+              class="project"
+              onclick="openModal('modal5')"
+              onmouseover="toggleArrow('arrow5', true)"
+              onmouseout="toggleArrow('arrow5', false)"
+            >
+              <h2>Movie Recommendation</h2>
+              <div id="arrow5" class="arrow"></div>
+            </div>
+            <div
+              class="project"
+              onclick="openModal('modal6')"
+              onmouseover="toggleArrow('arrow6', true)"
+              onmouseout="toggleArrow('arrow6', false)"
+            >
+              <h2>Quiz Sphere</h2>
+              <div id="arrow6" class="arrow"></div>
             </div>
             <!-- Add more projects here in similar structure -->
           </div>
@@ -182,6 +200,62 @@
             using an AI language model. This app leverages the T5 model hosted
             on Hugging Face to translate user inputs, providing a seamless and
             interactive user experience.
+          </p>
+        </div>
+      </div>
+
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal5')">&times;</span>
+          <h2>Movie Recommendation Application</h2>
+          <ul>
+            <li>
+              <b>Tech Stack: </b>API, JavaScript, HTML5, Cascading Style Sheets
+              (CSS)
+            </li>
+            <li>
+              <b>Github URL: </b
+              ><a
+                href="https://github.com/pranideepnayaki/Movie_Recommendation"
+                target="_blank"
+                >Project Link</a
+              >
+            </li>
+          </ul>
+          <p>
+            Developed a web application that recommends movies based on
+            user-selected genres, fetching real-time data from The Movie
+            Database (TMDb) API. The app allows users to explore movie
+            suggestions, view details such as posters and descriptions, and like
+            or dislike recommendations for a new random movie.
+          </p>
+        </div>
+      </div>
+
+      <div id="modal6" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal6')">&times;</span>
+          <h2>Quiz Sphere</h2>
+          <ul>
+            <li>
+              <b>Tech Stack: </b>API, JavaScript, HTML5, Cascading Style Sheets
+              (CSS)
+            </li>
+            <li>
+              <b>Github URL: </b
+              ><a
+                href="https://github.com/pranideepnayaki/Quiz_Game"
+                target="_blank"
+                >Project Link</a
+              >
+            </li>
+          </ul>
+          <p>
+            The Quiz Game is an interactive web application designed to test
+            users' knowledge across various topics. This engaging platform
+            offers a fun way for individuals to learn and challenge themselves,
+            making it an ideal choice for friendly competitions with friends and
+            family.
           </p>
         </div>
       </div>
